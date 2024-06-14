@@ -14,13 +14,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const nameDisplay = document.getElementById('name-display');
         const jenisPohonDisplay = document.getElementById('jenis-pohon-display');
         const imageUrlDisplay = document.getElementById('hero-image');
-  
+        const nameDisplayCell = document.getElementById('name-table');
+        const tinggiDisplayCell = document.getElementById('tinggi-table');
+        const jenisPohonDisplayCell = document.getElementById('jenisPohon-table');
         if (matchingEntry) {
           // Display data if found
           
           nameDisplay.textContent = matchingEntry.Name;
           jenisPohonDisplay.textContent = matchingEntry.JenisPohon;
           imageUrlDisplay.src = matchingEntry.ImageUrl;
+          nameDisplayCell.textContent = matchingEntry.Name;
+          tinggiDisplayCell.textContent = matchingEntry.TinggiPohon;
+          jenisPohonDisplayCell.textContent = matchingEntry.JenisPohon;
         } else {
           // Display error message if not found
           idDisplay.textContent = 'No data found for this ID.';
