@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const urlParams = new URLSearchParams(window.location.search);
-  const uniqueID = urlParams.get('id');
+  const id = urlParams.get('id');
 
   const matchingEntry = data.find(entry => entry.id === id);
 
