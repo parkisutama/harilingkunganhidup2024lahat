@@ -17,12 +17,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const nameDisplayCell = document.getElementById('name-table');
         const tinggiDisplayCell = document.getElementById('tinggi-table');
         const jenisPohonDisplayCell = document.getElementById('jenisPohon-table');
+        const heroalt = document.getElementById('alt-hero');
         if (matchingEntry) {
           // Display data if found
           
           nameDisplay.textContent = matchingEntry.Name;
           jenisPohonDisplay.textContent = matchingEntry.JenisPohon;
           imageUrlDisplay.src = matchingEntry.ImageUrl;
+          imageUrlDisplay.alt = matchingEntry.JenisPohon;
           nameDisplayCell.textContent = matchingEntry.Name;
           tinggiDisplayCell.textContent = matchingEntry.TinggiPohon;
           jenisPohonDisplayCell.textContent = matchingEntry.JenisPohon;

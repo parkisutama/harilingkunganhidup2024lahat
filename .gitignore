@@ -8,3 +8,5 @@ input.css
 #ignore package
 package-lock.json
 package.json
+#ignore folder pohon
+pohon/
