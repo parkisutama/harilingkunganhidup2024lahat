@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const heroalt = document.getElementById('alt-hero');
         if (matchingEntry) {
           // Display data if found
-          
           nameDisplay.textContent = matchingEntry.Name;
           jenisPohonDisplay.textContent = matchingEntry.JenisPohon;
           imageUrlDisplay.src = matchingEntry.ImageUrl;
@@ -28,13 +27,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
           nameDisplayCell.textContent = matchingEntry.Name;
           tinggiDisplayCell.textContent = matchingEntry.TinggiPohon;
           jenisPohonDisplayCell.textContent = matchingEntry.JenisPohon;
+          document.getElementById('cari-pohon').classList.add('hidden');
         } else {
           // Display error message if not found
           document.getElementById('hero-image').classList.add('hidden');
           document.getElementById('info-table').classList.add('hidden');
           document.getElementById('info-pohon').classList.add('hidden');
-          idDisplay.textContent = 'No data found for this ID.';
+          
         }
       })
       .catch(error => console.error('Error:', error));
-  });
+});
+
+// Listen for form submission
+  document.getElementById('cari-pohon').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const searchId = document.getElementById('input-cari-pohon').value;
+  if (searchId) {
+    window.location.href = window.location.pathname + '?id=' + searchId;
+  }
+});
