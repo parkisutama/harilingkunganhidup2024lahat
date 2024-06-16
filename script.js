@@ -30,6 +30,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
           jenisPohonDisplayCell.textContent = matchingEntry.JenisPohon;
         } else {
           // Display error message if not found
+          document.getElementById('hero-image').classList.add('hidden');
+          document.getElementById('info-table').classList.add('hidden');
+          document.getElementById('info-pohon').classList.add('hidden');
           idDisplay.textContent = 'No data found for this ID.';
         }
       })
