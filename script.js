@@ -15,16 +15,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const jenisPohonDisplay = document.getElementById('jenis-pohon-display');
         const imageUrlDisplay = document.getElementById('hero-image');
         const nameDisplayCell = document.getElementById('name-table');
+        const jabatanDisplayCell = document.getElementById('jabatan-table');
         const tinggiDisplayCell = document.getElementById('tinggi-table');
         const jenisPohonDisplayCell = document.getElementById('jenisPohon-table');
         const heroalt = document.getElementById('alt-hero');
         if (matchingEntry) {
           // Display data if found
-          nameDisplay.textContent = matchingEntry.Name;
+          //nameDisplay.textContent = matchingEntry.Name;
           jenisPohonDisplay.textContent = matchingEntry.JenisPohon;
           imageUrlDisplay.src = matchingEntry.ImageUrl;
           imageUrlDisplay.alt = matchingEntry.JenisPohon;
           nameDisplayCell.textContent = matchingEntry.Name;
+          jabatanDisplayCell.textContent = matchingEntry.Jabatan;
           tinggiDisplayCell.textContent = matchingEntry.TinggiPohon;
           jenisPohonDisplayCell.textContent = matchingEntry.JenisPohon;
           document.getElementById('cari-pohon').classList.add('hidden');
